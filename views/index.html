@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Peithon</title>
+</head>
+<body>
+    <!-- <h1>Peithon</h1>
+    <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Est harum porro natus, assumenda eos quia sapiente unde, quam mollitia voluptates modi. Molestiae delectus veritatis architecto sed, sunt quisquam aliquam hic?</p>
+    <p><a href="/crud">Acessar o CRUD</a></p>
+    <p><a href="/T">Macaco</a></p> -->
+    <hr>
+    <!-- Jinja2
+    Minha escola é a <b> {#pEscola}} </b> de <b> {#pCidade}} </b> 
+    <hr>
+    <!--Concatenado -->
+    <!-- Minha escola é a <b> {#pEscola2 + " de " + pCidade#} </b> -->
+    
+    <hr>
+    <!-- Comandos do Jinja2 -->
+    <!-- {# Este é um comentário #} -->
+    <!-- Estrutura de Condicional -->
+    <!-- {# if pCidade == "Registro" #}
+    A cidade é Registro!
+    {# elif pCidade == "Jacupiranga" #}
+    A cidade é Jacupiranga
+    {# else #}
+    Cidade incorreta!
+    {# endif #} -->
+
+    <hr>
+
+        <table border="1">
+            <thead>
+                <tr>
+                    <th>Nome</th>
+                    <th>Idade</th>
+                    <th>Ação</th>
+                </tr>
+            </thead>
+            <tbody>
+                {% for e in pEstudantes %}
+                <tr>
+                    <td>{{ e.nome }}</td>
+                    <td>{{ e.idade }}</td>
+                    <td>
+                        <a href="/edit/{{e.id}}">Editar</a>
+                        <a href="/delete/{{e.id}}">Editar</a>
+                    </td>
+                </tr>
+                {% endfor %}
+            </tbody>
+
+        </table>
+
+</body>
+</html>
